@@ -1,0 +1,4 @@
+src/lib/*
+.next
+_examples*
+dist/

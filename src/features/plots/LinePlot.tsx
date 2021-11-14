@@ -10,9 +10,9 @@ const data = {
       backgroundColor: '#008080',
       borderColor: '#7fffd4',
       pointBorderWidth: 10,
-      data: [5, 6, 9, 15, 30, 40, 80],
-    },
-  ],
+      data: [5, 6, 9, 15, 30, 40, 80]
+    }
+  ]
 };
 
 const LinePlot: React.FC = () => {

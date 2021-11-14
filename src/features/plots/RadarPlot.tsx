@@ -13,7 +13,7 @@ const data = {
       pointBackgroundColor: 'rgb(255, 99, 132)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(255, 99, 132)',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
     },
     {
       label: 'My Second Dataset',
@@ -24,9 +24,9 @@ const data = {
       pointBackgroundColor: 'rgb(54, 162, 235)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(54, 162, 235)',
-    },
-  ],
+      pointHoverBorderColor: 'rgb(54, 162, 235)'
+    }
+  ]
 };
 
 const RadarPlot: React.FC = () => {
