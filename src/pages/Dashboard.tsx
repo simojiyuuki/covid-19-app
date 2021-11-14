@@ -1,9 +1,9 @@
 import React from 'react';
-import MaterialUI from '../components/organisms/MaterialUI';
+import MUI from '../components/organisms/MUI';
 const Dashboard: React.FC = () => {
   return (
     <div>
-      <MaterialUI />
+      <MUI />
     </div>
   );
 };

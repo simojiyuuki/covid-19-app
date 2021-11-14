@@ -1,4 +1,5 @@
 import { ThemedStyledProps, InterpolationValue, FlattenInterpolation, css } from 'styled-components';
+import { breakpoints } from './themeOptions';
 
 /**
  * https://github.com/morajabi/styled-media-query/blob/master/src/index.d.ts
@@ -16,22 +17,21 @@ type GeneratorFunction<Props, Theme> = (
   )[]
 ) => any;
 
-// レスポンシブ対応: cssのmedia変更する
-// provider/MediaQUeryProvider.tsxのルールに合わせる
+// レスポンシブ対応: cssのmediaで変更する(Material-UIのブレークポイント定義に合わせる)
 /* eslint @typescript-eslint/no-explicit-any: 0 */
 const media: { [v: string]: GeneratorFunction<unknown, any> } = {
   mb: (...args) => css`
-    @media screen and (max-width: 519px) {
+    @media screen and (max-width: ${breakpoints.mbMaxSize}) {
       ${css(...args)}
     }
   `,
   tb: (...args) => css`
-    @media screen and (min-width: 520px) and (max-width: 959px) {
+    @media screen and (min-width: ${breakpoints.tbMinSize}) and (max-width: ${breakpoints.tbMaxSize}) {
       ${css(...args)}
     }
   `,
   pc: (...args) => css`
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: ${breakpoints.pcMinSize}) {
       ${css(...args)}
     }
   `

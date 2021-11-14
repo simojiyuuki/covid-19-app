@@ -2,8 +2,12 @@ import React from 'react';
 import { Button, Grid, Paper, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import media from '../../app/styles/media';
+import { useMediaQueryContext } from '../../app/provider/MediaQueryProvider';
 
+// MaterialUI_v4
 const MaterialUI: React.FC = () => {
+  const { isMobileSize, isTabletSize, isPcSize } = useMediaQueryContext();
+
   return (
     <div>
       <Typography color="secondary" variant="h1" align="left" gutterBottom noWrap>
@@ -14,10 +18,34 @@ const MaterialUI: React.FC = () => {
         <Grid item xs={12}>
           <$Paper>xs=12</$Paper>
         </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <$Paper>xs=6</$Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <$Paper>xs=6</$Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <$Paper>xs=6</$Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <$Paper>xs=6</$Paper>
+        </Grid>
       </Grid>
-      <$Button variant="contained" color="primary">
-        Contained
-      </$Button>
+      {isMobileSize && (
+        <$Button variant="contained" color="primary">
+          モバイル
+        </$Button>
+      )}
+      {isTabletSize && (
+        <$Button variant="contained" color="primary">
+          タブレット
+        </$Button>
+      )}
+      {isPcSize && (
+        <$Button variant="contained" color="primary">
+          PC
+        </$Button>
+      )}
     </div>
   );
 };
