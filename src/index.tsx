@@ -1,18 +1,46 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import { store } from "./app/store";
-import { Provider } from "react-redux";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { store } from './stores/store';
+import { Provider } from 'react-redux';
+import * as serviceWorker from './serviceWorker';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+
+// リセットCSS: https://github.com/zacanger/styled-reset
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+  /* other styles */
+  html{
+    height: 100%;
+  }
+  body {
+    background: #f6f6f6;
+    font-size: 80%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body > #root > div {
+    height: 100vh;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  }
+`;
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <GlobalStyle />
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
