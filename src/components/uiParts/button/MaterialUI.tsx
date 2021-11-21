@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Grid, Paper, Typography } from '@material-ui/core';
 import styled from 'styled-components';
-import media from '../../app/styles/media';
-import { useMediaQueryContext } from '../../app/provider/MediaQueryProvider';
+import media from '../../../styles/media';
+import { useMediaQueryContext } from '../../../providers/MediaQueryProvider';
 
 // MaterialUI_v4
 const MaterialUI: React.FC = () => {
@@ -69,4 +69,5 @@ const $Paper = styled(Paper)`
   background: orange;
   padding: 50px;
 `;
+
 export default MaterialUI;

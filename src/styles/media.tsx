@@ -17,7 +17,7 @@ type GeneratorFunction<Props, Theme> = (
   )[]
 ) => any;
 
-// レスポンシブ対応: cssのmediaで変更する(Material-UIのブレークポイント定義に合わせる)
+// レスポンシブ対応②: cssのmediaで変更する(Material-UIのブレークポイント定義に合わせる)
 /* eslint @typescript-eslint/no-explicit-any: 0 */
 const media: { [v: string]: GeneratorFunction<unknown, any> } = {
   mb: (...args) => css`

@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import counterReducer from './slices/counter/counterSlice';
+import covid19Reducer from './slices/covid19/covid19Slice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer,
+    covid19: covid19Reducer
   }
 });
 

@@ -13,7 +13,7 @@ export const themeOptions = {
       sm: 600,
       md: 960,
       lg: 1200,
-      xl: 1536
+      xl: 1836
     }
   }
 };

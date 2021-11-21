@@ -27,7 +27,7 @@ const mediaQueries = {
   pc: `(min-width: ${breakpoints.pcMinSize})`
 };
 
-// レスポンシブ対応: cssのmedia変更ではなく、端末毎に表示するコンポネートを切り替える場合に利用
+// レスポンシブ対応①: cssのmedia変更ではなく、端末毎に表示するコンポネートを切り替える場合に利用
 const MediaQueryProvider: React.FC<Prop> = ({ children }: Prop) => {
   const isMobileSize = useMedia(mediaQueries.mb);
   const isTabletSize = useMedia(mediaQueries.tb);

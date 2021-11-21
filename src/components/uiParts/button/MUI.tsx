@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Paper } from '@mui/material';
 import styled from 'styled-components';
-import media from '../../app/styles/media';
+import media from '../../../styles/media';
 
 // MaterialUI_v5(MaterialUI=>MUI命名変更)
 const MUI: React.FC = () => {
